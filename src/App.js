@@ -22,8 +22,12 @@ function App() {
         {/* <img src={logo} className="App-logo" alt="logo" /> */}
         <h1 className="App-title">TV series App</h1>
       </header>
-      
-      <AppIntro />  {/*Special feature to call a functional component*/}
+
+      {/*
+        Special feature to call a functional component with the same name, 
+        function name have to be capitalize the first letter to differentiate from normal HTML tags
+        */}
+      <AppIntro />
       {/*AppIntro() /*This is OK as it is just JS inside a "{" and "}" */}  
       {/*<Test/>   /*This is also ok*/}
     </div>
