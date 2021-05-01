@@ -1,11 +1,13 @@
 import {Switch, Route} from 'react-router-dom';
 
 import Series from '../../containers/Series';
+import SingleSeries from '../../containers/SingleSeries';
 
 const Main = (props) => {
   return (
   <Switch>
-    <Route path="/" component={Series} />
+    <Route exact path="/" component={Series} />
+    <Route path="/series/:id" component={SingleSeries}/>
   </Switch>
   );
 }
