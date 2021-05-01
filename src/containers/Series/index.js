@@ -11,10 +11,24 @@ class Series extends React.Component {
     return (
       <div>
         <div>
-          <input type="text" onChange={this.onSearchInputChange}/>
+          <input 
+            value={this.state.searchValue}
+            type="text"
+            onChange={this.onSearchInputChange}
+          />
         </div>
-        <p>Current TV show results: {this.state.series.length}</p>
-        <SeriesList list={this.state.series} />
+        { 
+          !this.state.isFetching 
+          && this.state.series.length === 0 
+          && this.state.searchValue.trim() !== ''
+          && <p>No result</p>
+        }
+        {
+          this.state.isFetching && <p>Searching...</p>
+        }
+        {
+          !this.state.isFetching && <SeriesList list={this.state.series} />
+        }
       </div>
     )
   }
@@ -24,6 +38,8 @@ class Series extends React.Component {
   // to which React component react to it changes
   state = {
     series: [],
+    searchValue: '',
+    isFetching: false,
   }
 
   // Call after the first render() is called when component first mount
@@ -32,8 +48,13 @@ class Series extends React.Component {
   }
 
   onSearchInputChange = (event) => {
+    this.setState({
+      searchValue: event.target.value,
+      isFetching: true,
+    });
+
     this.fetchData(event.target.value)
-    .then(json => this.setState({ series: json }));
+    .then(json => this.setState({ series: json, isFetching: false,}));
   }
 
   fetchData(searchString) {
