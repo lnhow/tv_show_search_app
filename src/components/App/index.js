@@ -1,21 +1,17 @@
 // import logo from './logo.svg';  <-- Webpack allow svg imports
 import React from 'react';
-import './App.css';
-import AppIntro from "../Intro";  //Directory
 import 'whatwg-fetch';
+import './App.css';
+
+import AppIntro from "../Intro";  //Directory
+import Series from "../../containers/Series";
 
 // function Test() {
 //   return 5;
 // }
 
 class App extends React.Component {
-  // "state" is special JS object
-  // to which React component react to it changes
-  state = {
-    series: [],
-  }
-
-  render() {
+    render() {
     return (
       //This comment will not show up in user's browser but can't be written inside a JSX component
       /*This comment will behave the same as the one above*/
@@ -35,22 +31,9 @@ class App extends React.Component {
                         //returns will be convert to string & show on the browser
           */}
           <AppIntro message="An app to display your favorite TV shows"/>
-          <p>Current TV shows: {this.state.series.length}</p>
+          <Series />
       </div>
     );
-  }
-
-  // Call after the first render() is called when component first mount
-  // Trigger re-rendering if setting state
-  componentDidMount() {
-    //An API for TV infomation
-    fetch("http://api.tvmaze.com/search/shows?q=Vikings")
-    .then(response => response.json())  //.json return a Promise
-    .then(json => this.setState({ series: json }));
-
-    // const series = ["Show 1", "Show 2"];
-
-    // this.setState({ series });
   }
 }
 
