@@ -2,6 +2,7 @@
 import React from 'react';
 import './App.css';
 import AppIntro from "../Intro";  //Directory
+import 'whatwg-fetch';
 
 // function Test() {
 //   return 5;
@@ -42,9 +43,14 @@ class App extends React.Component {
   // Call after the first render() is called when component first mount
   // Trigger re-rendering if setting state
   componentDidMount() {
-    const series = ["Show 1", "Show 2"];
+    //An TV infomation site
+    fetch("http://api.tvmaze.com/search/shows?q=Vikings")
+    .then(response => response.json())  //.json return a Promise
+    .then(json => this.setState({ series: json }));
 
-    this.setState({ series });
+    // const series = ["Show 1", "Show 2"];
+
+    // this.setState({ series });
   }
 }
 
