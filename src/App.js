@@ -8,6 +8,12 @@ import AppIntro from "./components/intro";  //Directory
 // }
 
 class App extends React.Component {
+  // "state" is special JS object
+  // to which React component react to it changes
+  state = {
+    series: [],
+  }
+
   render() {
     return (
       //This comment will not show up in user's browser but can't be written inside a JSX component
@@ -28,6 +34,7 @@ class App extends React.Component {
                         //returns will be convert to string & show on the browser
           */}
           <AppIntro message="An app to display your favorite TV shows"/>
+          <p>Current TV shows: {this.state.series.length}</p>
       </div>
     );
   }
