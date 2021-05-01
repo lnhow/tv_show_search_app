@@ -5,24 +5,24 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 
-const getCurrentDate = function () {
-  return (new Date()).toDateString();
-}
+// const getCurrentDate = function () {
+//   return (new Date()).toDateString();
+// }
 //Babel translate things like this
-const aComponent = 
-  <>
-    <h1>
-      Ok, The instructor is know what he is doing :)
-    </h1>
-    <p>Today is {getCurrentDate() /*JS can be written in curly braces, is a Babel thing*/}</p>
-  </>;
+// const aComponent = 
+//   <>
+//     <h1>
+//       Ok, The instructor is know what he is doing :)
+//     </h1>
+//     <p>Today is {getCurrentDate() /*JS can be written in curly braces, is a Babel thing*/}</p>
+//   </>;
 //Into JSX so that it can be render to a html object
 
 ReactDOM.render(
-  aComponent,
-  // <React.StrictMode>
-  //   <App />
-  // </React.StrictMode>,
+  // aComponent,
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
   document.getElementById('root') //DOM container to render this component
 );
 
