@@ -1,7 +1,8 @@
 import React from 'react';        //React things
 import ReactDOM from 'react-dom'; //React to HTML DOM interactions
 import './index.css';
-import App from './components/App/App';
+//index.js is a default file that a directory imports point to
+import App from './components/App';
 import reportWebVitals from './reportWebVitals';
 
 
