@@ -1,12 +1,6 @@
 // import logo from './logo.svg';  <-- Webpack allow svg imports
 import './App.css';
-
-
-function AppIntro(props) {
-  return <p className="App-intro">
-    This is from a functional component
-  </p>
-}
+import AppIntro from "./components/intro";  //Directory
 
 // function Test() {
 //   return 5;
@@ -26,10 +20,13 @@ function App() {
       {/*
         Special feature to call a functional component with the same name, 
         function name have to be capitalize the first letter to differentiate from normal HTML tags
+        <AppIntro />  //The normal way
+        {AppIntro()}  //This is OK as it is just JS inside a "{" and "}"
+        <Test/>       //It is also ok for function that return a non-JSX,
+                      //returns will be convert to string & show on the browser
         */}
-      <AppIntro />
-      {/*AppIntro() /*This is OK as it is just JS inside a "{" and "}" */}  
-      {/*<Test/>   /*This is also ok*/}
+        <AppIntro message="An app to display your favorite TV shows"/>
+
     </div>
   );
 }
