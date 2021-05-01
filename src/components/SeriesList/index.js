@@ -1,18 +1,23 @@
-//import React from 'react';
 import "./index.css"; // Tell webpack that series list use this style
+
+const SeriesListItem = ({series}) => {
+  return (
+  <li>
+    {series.show.name}
+  </li>
+  );
+}
 
 const SeriesList = (props) => {
   return (
-    <div>
-      <ul className="Series-list">
-        {props.list.map(series => 
-          <li key={series.show.id}>
-            {/* React list have to get have a unique key */}
-            {series.show.name}
-          </li>
-        )}
-      </ul>
-    </div>
+  <div>
+    <ul className="Series-list">
+      {/* React components inside list have to have a unique key */}
+      {props.list.map(series => 
+        <SeriesListItem key={series.show.id} series={series} />
+      )}
+    </ul>
+  </div>
   );
 }
 
