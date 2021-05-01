@@ -1,12 +1,16 @@
 import React from 'react';
+import SeriesList from '../../components/SeriesList';
 
-// Container component is concern with getting data 
+// Container component is concern with making things works
 // For Presentation component to display the looks of it
 class Series extends React.Component {
   render() {
-    return <div>
-      <p>Current TV shows: {this.state.series.length}</p>
+    return (
+      <div>
+        <p>Current TV shows: {this.state.series.length}</p>
+        <SeriesList list={this.state.series} />
       </div>
+    )
   }
 
 
