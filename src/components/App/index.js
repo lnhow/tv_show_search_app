@@ -38,6 +38,14 @@ class App extends React.Component {
       </div>
     );
   }
+
+  // Call after the first render() is called when component first mount
+  // Trigger re-rendering if setting state
+  componentDidMount() {
+    const series = ["Show 1", "Show 2"];
+
+    this.setState({ series });
+  }
 }
 
 export default App;
