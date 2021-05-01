@@ -1,6 +1,7 @@
 import React from 'react';
 import SeriesList from '../../components/SeriesList';
 import Loader from "../../components/Loader";
+import AppIntro from "../../components/Intro";
 
 //An API for TV shows infomation
 const queryFormat = "http://api.tvmaze.com/search/shows?q=";
@@ -11,6 +12,15 @@ class Series extends React.Component {
   render() {
     return (
       <div>
+        {/*
+          Special feature to call a functional component with the same name, 
+          function name have to be capitalize the first letter to differentiate from normal HTML tags
+          <AppIntro />  //The normal way
+          {AppIntro()}  //This is OK as it is just JS inside a "{" and "}"
+          <Test/>       //It is also ok for function that return a non-JSX,
+                        //returns will be convert to string & show on the browser
+          */}
+        <AppIntro message="An app to display your favorite TV shows"/>
         <div>
           <input 
             value={this.state.searchValue}

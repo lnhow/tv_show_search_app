@@ -1,5 +1,6 @@
 import React from 'react';        //React things
-import ReactDOM from 'react-dom'; //React to HTML DOM interactions
+import ReactDOM from 'react-dom'; //React-to-HTML-DOM interactions
+import {BrowserRouter} from 'react-router-dom';
 import './index.css';
 //index.js is a default file that a directory imports point to
 import App from './components/App';
@@ -22,7 +23,9 @@ import reportWebVitals from './reportWebVitals';
 ReactDOM.render(
   // aComponent,
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root') //DOM container to render this component
 );

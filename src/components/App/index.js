@@ -2,9 +2,7 @@
 import React from 'react';
 import 'whatwg-fetch';
 import './App.css';
-
-import AppIntro from "../Intro";  //Directory
-import Series from "../../containers/Series";
+import Main from '../Main';
 
 // function Test() {
 //   return 5;
@@ -21,17 +19,7 @@ class App extends React.Component {
           {/* <img src={logo} className="App-logo" alt="logo" /> */}
           <h1 className="App-title">TV series App</h1>
         </header>
-
-        {/*
-          Special feature to call a functional component with the same name, 
-          function name have to be capitalize the first letter to differentiate from normal HTML tags
-          <AppIntro />  //The normal way
-          {AppIntro()}  //This is OK as it is just JS inside a "{" and "}"
-          <Test/>       //It is also ok for function that return a non-JSX,
-                        //returns will be convert to string & show on the browser
-          */}
-          <AppIntro message="An app to display your favorite TV shows"/>
-          <Series />
+        <Main />
       </div>
     );
   }
