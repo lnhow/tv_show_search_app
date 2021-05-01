@@ -1,9 +1,12 @@
+import { Link } from 'react-router-dom';
 import "./index.css"; // Tell webpack that series list use this style
 
 const SeriesListItem = ({series}) => {
   return (
   <li>
-    {series.show.name}
+    <Link to={`/series/${series.show.id}`}>
+      {series.show.name}
+    </Link>
   </li>
   );
 }
