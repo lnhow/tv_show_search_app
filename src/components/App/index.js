@@ -43,7 +43,7 @@ class App extends React.Component {
   // Call after the first render() is called when component first mount
   // Trigger re-rendering if setting state
   componentDidMount() {
-    //An TV infomation site
+    //An API for TV infomation
     fetch("http://api.tvmaze.com/search/shows?q=Vikings")
     .then(response => response.json())  //.json return a Promise
     .then(json => this.setState({ series: json }));
