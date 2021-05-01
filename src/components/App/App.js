@@ -1,7 +1,7 @@
 // import logo from './logo.svg';  <-- Webpack allow svg imports
 import React from 'react';
 import './App.css';
-import AppIntro from "./components/intro";  //Directory
+import AppIntro from "../Intro";  //Directory
 
 // function Test() {
 //   return 5;
