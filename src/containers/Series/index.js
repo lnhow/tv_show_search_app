@@ -1,5 +1,6 @@
 import React from 'react';
 import SeriesList from '../../components/SeriesList';
+import Loader from "../../components/Loader";
 
 //An API for TV shows infomation
 const queryFormat = "http://api.tvmaze.com/search/shows?q=";
@@ -24,7 +25,7 @@ class Series extends React.Component {
           && <p>No result</p>
         }
         {
-          this.state.isFetching && <p>Searching...</p>
+          this.state.isFetching && <Loader />
         }
         {
           !this.state.isFetching && <SeriesList list={this.state.series} />
