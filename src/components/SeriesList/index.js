@@ -3,7 +3,11 @@
 const SeriesList = (props) => {
   return (
     <div>
-      Series List component
+      <ul>
+        {props.list.map(series => 
+          <li>{series.show.name}</li>
+        )}
+      </ul>
     </div>
   );
 }
