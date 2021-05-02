@@ -59,13 +59,15 @@ class Series extends React.Component {
   }
 
   onSearchInputChange = (event) => {
+
     this.setState({
       searchValue: event.target.value,
       isFetching: true,
+    }, _ => {
+      this.fetchData(this.state.searchValue.trim())
+      .then(json => this.setState({ series: json, isFetching: false,}));
     });
-
-    this.fetchData(event.target.value)
-    .then(json => this.setState({ series: json, isFetching: false,}));
+    
   }
 
   fetchData(searchString) {
