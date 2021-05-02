@@ -6,6 +6,7 @@ function NotFound() {
     <div className="Center-Container">
       <div className="CenterBox">
         <div>
+          <h1 className="errorCode">404</h1>
           <h2>Not Found</h2>
           <Link to="/">Back to Home</Link>
         </div>
