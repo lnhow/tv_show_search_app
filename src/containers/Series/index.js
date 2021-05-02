@@ -39,7 +39,9 @@ class Series extends React.Component {
           this.state.isFetching && <Loader />
         }
         {
-          !this.state.isFetching && <SeriesList list={this.state.series} />
+          !this.state.isFetching
+          && this.state.searchInput !== ''
+          && <SeriesList list={this.state.series} />
         }
       </div>
     )
@@ -61,15 +63,14 @@ class Series extends React.Component {
 
   onSearchInputSubmit = (searchValue) => {
 
-    if (searchValue) {
-      this.setState({
-        searchInput: searchValue.trim(),
-        isFetching: true,
-      }, _ => {
-        this.fetchData(this.state.searchInput)
-        .then(json => this.setState({ series: json, isFetching: false,}));
-      });
-    }
+    this.setState({
+      searchInput: searchValue.trim(),
+      isFetching: true,
+    }, _ => {
+      this.fetchData(this.state.searchInput)
+      .then(json => this.setState({ series: json, isFetching: false,}));
+    });
+  
   }
 
   fetchData(searchString) {
