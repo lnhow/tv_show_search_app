@@ -1,0 +1,22 @@
+.App-footer {
+  background-color: #282c34;
+  color: white;
+  padding: 0.5rem 0.7rem;
+  position: fixed;
+  right: 0px;
+  bottom: 0px;
+}
+
+.App-footer p {
+  margin: 0px;
+  font-size: 1.1rem;
+}
+
+.App-footer a {
+  color: white;
+  text-decoration: none;
+}
+
+.App-footer a:hover {
+  text-decoration: underline;
+}
