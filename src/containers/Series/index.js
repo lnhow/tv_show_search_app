@@ -24,9 +24,10 @@ class Series extends React.Component {
         */}
         {
           this.state.series.length === 0
+          && this.state.searchInput === ''
           && <AppIntro message="Search for TV shows"/>
         }
-        <div class="wrapper" style={{marginTop: '0.7rem'}}>
+        <div className="wrapper" style={{marginTop: '0.7rem'}}>
           <SearchBox onSubmit= {this.onSearchInputSubmit}/>
         </div>
         { 

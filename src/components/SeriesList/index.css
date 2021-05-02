@@ -1,4 +1,57 @@
+.ListWrapper {
+  display: flex;
+  justify-content: center;
+}
+
 .Series-list {
+  width: 80%;
+  max-width: 576px;
   list-style: none;
+  display: flex;
+  flex-wrap: wrap;
   padding-left: 0px;
+}
+
+.Series-Link {
+  color: #282c34;
+  text-decoration: none;
+}
+
+.Series-Image {
+  max-width: 70px;
+  height: auto;
+  width: 100%;
+}
+
+.Series-Wrapper {
+  min-height: 6rem;
+  margin: 0.2rem;
+  display: flex;
+}
+
+.Series-Wrapper:hover {
+  background-color: #282c34;
+  color: white;
+}
+
+.Series-Wrapper .Series-Name, .Extra-Info {
+  margin: 0px;
+  text-align: left;
+}
+
+.Series-Wrapper .Series-Info {
+  margin: 0.1rem 0rem 0.1rem 0.6rem;
+  padding: 0.1rem 0rem;
+}
+
+.Extra-Info {
+  font-size: 0.8rem;
+}
+
+.column {
+  width: 50%;
+}
+
+@media screen {
+  
 }
