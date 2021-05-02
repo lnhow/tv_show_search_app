@@ -1,7 +1,9 @@
 import React from 'react';
+
 import SeriesList from '../../components/SeriesList';
 import Loader from "../../components/Loader";
 import AppIntro from "../../components/Intro";
+import SearchBox from "../../components/SearchBox";
 
 //An API for TV shows infomation
 const queryFormat = "http://api.tvmaze.com/search/shows?q=";
@@ -21,17 +23,11 @@ class Series extends React.Component {
                         //returns will be convert to string & show on the browser
           */}
         <AppIntro message="An app to display your favorite TV shows"/>
-        <div>
-          <input 
-            value={this.state.searchValue}
-            type="text"
-            onChange={this.onSearchInputChange}
-          />
-        </div>
+        <SearchBox onSubmit= {this.onSearchInputSubmit}/>
         { 
           !this.state.isFetching 
           && this.state.series.length === 0 
-          && this.state.searchValue.trim() !== ''
+          && this.state.searchInput !== ''
           && <p>No result</p>
         }
         {
@@ -49,8 +45,8 @@ class Series extends React.Component {
   // to which React component react to it changes
   state = {
     series: [],
-    searchValue: '',
     isFetching: false,
+    searchInput: '',
   }
 
   // Call after the first render() is called when component first mount
@@ -58,16 +54,17 @@ class Series extends React.Component {
   componentDidMount() {
   }
 
-  onSearchInputChange = (event) => {
+  onSearchInputSubmit = (searchValue) => {
 
-    this.setState({
-      searchValue: event.target.value,
-      isFetching: true,
-    }, _ => {
-      this.fetchData(this.state.searchValue.trim())
-      .then(json => this.setState({ series: json, isFetching: false,}));
-    });
-    
+    if (searchValue) {
+      this.setState({
+        searchInput: searchValue.trim(),
+        isFetching: true,
+      }, _ => {
+        this.fetchData(this.state.searchInput)
+        .then(json => this.setState({ series: json, isFetching: false,}));
+      });
+    }
   }
 
   fetchData(searchString) {
