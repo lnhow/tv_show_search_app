@@ -21,9 +21,14 @@ class Series extends React.Component {
           {AppIntro()}  //This is OK as it is just JS inside a "{" and "}"
           <Test/>       //It is also ok for function that return a non-JSX,
                         //returns will be convert to string & show on the browser
-          */}
-        <AppIntro message="An app to display your favorite TV shows"/>
-        <SearchBox onSubmit= {this.onSearchInputSubmit}/>
+        */}
+        {
+          this.state.series.length === 0
+          && <AppIntro message="Search for TV shows"/>
+        }
+        <div class="wrapper" style={{marginTop: '0.7rem'}}>
+          <SearchBox onSubmit= {this.onSearchInputSubmit}/>
+        </div>
         { 
           !this.state.isFetching 
           && this.state.series.length === 0 
