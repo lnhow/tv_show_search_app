@@ -16,7 +16,7 @@ class SingleSeries extends React.Component {
 
   componentDidMount() {
     const id = this.props.match.params.id;
-    const isValidId = Number.isInteger(id);
+    const isValidId = !isNaN(id);
 
     if (isValidId) {
       this.fetchData(this.props.match.params.id)

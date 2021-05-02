@@ -28,7 +28,6 @@ const SeriesListItem = ({series}) => {
 }
 
 const SeriesList = (props) => {
-  console.log(props.list);
   return (
   <div className="ListWrapper">
     <ul className="Series-list">
