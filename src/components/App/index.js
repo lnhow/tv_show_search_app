@@ -4,6 +4,7 @@ import 'whatwg-fetch';
 
 import './App.css';
 import Main from '../Main';
+import Header from '../AppHeader';
 import Footer from '../AppFooter';
 
 // function Test() {
@@ -17,10 +18,7 @@ class App extends React.Component {
       /*This comment will behave the same as the one above*/
       <div className="App">
         {/* This comment is a comment inside a JSX component and can't be written like the 2 above*/}
-        <header className="App-header">
-          {/* <img src={logo} className="App-logo" alt="logo" /> */}
-          <h1 className="App-title">TV series App</h1>
-        </header>
+        <Header />
         <Main />
         <Footer />
       </div>
