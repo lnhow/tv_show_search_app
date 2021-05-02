@@ -20,6 +20,9 @@ class App extends React.Component {
           <h1 className="App-title">TV series App</h1>
         </header>
         <Main />
+        <footer>
+          <p>API: <a href="https://www.tvmaze.com/api" target="_blank" rel="noreferrer">TVMaze</a></p>
+        </footer>
       </div>
     );
   }
