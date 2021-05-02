@@ -4,7 +4,7 @@ import 'whatwg-fetch';
 
 import './App.css';
 import Main from '../Main';
-import Footer from '../Footer';
+import Footer from '../AppFooter';
 
 // function Test() {
 //   return 5;
