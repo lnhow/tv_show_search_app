@@ -1,4 +1,4 @@
-# TV Series app
+### TV Show Search App
 
 This is simple React app that search & display TV series info.
 
