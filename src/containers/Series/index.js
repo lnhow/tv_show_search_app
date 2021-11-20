@@ -6,7 +6,7 @@ import AppIntro from "../../components/intro";
 import SearchBox from "../../components/searchBox";
 
 //An API for TV shows infomation
-const queryFormat = "http://api.tvmaze.com/search/shows?q=";
+const queryFormat = "https://api.tvmaze.com/search/shows?q=";
 
 // Container component is concern with making things works
 // For Presentation component to display the looks of it
