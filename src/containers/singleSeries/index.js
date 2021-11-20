@@ -6,7 +6,7 @@ import SeriesInfo from '../../components/seriesInfo';
 import NotFound from '../../components/notFound';
 
 //An API for TV shows infomation
-const queryFormat = "http://api.tvmaze.com/shows/";
+const queryFormat = "https://api.tvmaze.com/shows/";
 
 class SingleSeries extends React.Component {
   state = {
