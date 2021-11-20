@@ -1,0 +1,35 @@
+.Center-Container {
+  height: 100vh;
+  display: flex;
+}
+
+.CenterBox {
+  margin: 0px auto;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+.CenterBox h2 {
+  margin-bottom: 2rem;
+}
+
+.CenterBox a {
+  border-radius: 5px;
+  background-color: #282c34;
+  padding: 0.7rem;
+  color: white;
+  text-decoration: none;
+}
+
+.CenterBox a:hover {
+  background-color: #474c57;
+}
+
+.errorCode {
+  font-weight: 10;
+  font-size: 5rem;
+  margin: 0px;
+}
