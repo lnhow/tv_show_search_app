@@ -4,16 +4,16 @@ import './index.css';
 class SearchBox extends Component {
   state = {
     inputValue: '',
-  }
+  };
 
   render() {
     return (
-      <div className="SearchBox-Container">
-        <input 
-          className="SearchBox"
+      <div className='SearchBox-Container'>
+        <input
+          className='SearchBox'
           value={this.state.searchValue}
-          type="text"
-          placeholder="Search..."
+          type='text'
+          placeholder='Search...'
           onChange={this.onSearchInputChange}
         />
       </div>
@@ -21,12 +21,15 @@ class SearchBox extends Component {
   }
 
   onSearchInputChange = (event) => {
-    this.setState( {
-      inputValue: event.target.value,
-    }, _ => {
-      this.props.onSubmit(this.state.inputValue);
-    })
-  }
+    this.setState(
+      {
+        inputValue: event.target.value,
+      },
+      (_) => {
+        this.props.onSubmit(this.state.inputValue);
+      },
+    );
+  };
 }
 
 export default SearchBox;

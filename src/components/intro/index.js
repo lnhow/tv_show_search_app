@@ -3,12 +3,10 @@ import './index.css';
 //Props is an object that allow passing agruments from component to component
 function AppIntro(props) {
   return (
-  <div>
-    <div className="Down"></div>
-    <p className="App-intro">
-      { props.message }
-    </p>
-  </div>
+    <div>
+      <div className='Down'></div>
+      <p className='App-intro'>{props.message}</p>
+    </div>
   );
 }
 

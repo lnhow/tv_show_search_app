@@ -34,7 +34,8 @@
   color: white;
 }
 
-.Series-Wrapper .Series-Name, .Extra-Info {
+.Series-Wrapper .Series-Name,
+.Extra-Info {
   margin: 0px;
   text-align: left;
 }
@@ -53,7 +54,7 @@
 }
 
 @media screen and (max-width: 600px) {
-  .column{
+  .column {
     width: 100%;
   }
 }

@@ -1,17 +1,16 @@
-import React from 'react';        //React things
+import React from 'react'; //React things
 import ReactDOM from 'react-dom'; //React-to-HTML-DOM interactions
-import {BrowserRouter} from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import './index.css';
 //index.js is a default file that a directory imports point to
 import App from './components/app';
 import reportWebVitals from './reportWebVitals';
 
-
 // const getCurrentDate = function () {
 //   return (new Date()).toDateString();
 // }
 //Babel translate things like this
-// const aComponent = 
+// const aComponent =
 //   <>
 //     <h1>
 //       Ok, The instructor know what he is doing :)
@@ -27,7 +26,7 @@ ReactDOM.render(
       <App />
     </BrowserRouter>
   </React.StrictMode>,
-  document.getElementById('root') //DOM container to render this component
+  document.getElementById('root'), //DOM container to render this component
 );
 
 // If you want to start measuring performance in your app, pass a function

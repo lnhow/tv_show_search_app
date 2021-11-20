@@ -3,12 +3,12 @@ import './index.css';
 
 function NotFound() {
   return (
-    <div className="Center-Container">
-      <div className="CenterBox">
+    <div className='Center-Container'>
+      <div className='CenterBox'>
         <div>
-          <h1 className="errorCode">404</h1>
+          <h1 className='errorCode'>404</h1>
           <h2>Not Found</h2>
-          <Link to="/">Back to Home</Link>
+          <Link to='/'>Back to Home</Link>
         </div>
       </div>
     </div>

@@ -4,18 +4,18 @@
   justify-content: center;
 }
 
-.SearchBox{
+.SearchBox {
   width: 80%;
   max-width: 576px;
   height: 2rem;
   padding: 0.1rem 0.5rem;
   font-size: 1.5rem;
-  
+
   border-radius: 3px;
   border: 1px solid #282c34;
 }
 
-.SearchBox:focus{
+.SearchBox:focus {
   color: #282c34;
   border: 1px solid #282c34;
 }
