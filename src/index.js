@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'; //React-to-HTML-DOM interactions
 import {BrowserRouter} from 'react-router-dom';
 import './index.css';
 //index.js is a default file that a directory imports point to
-import App from './components/App';
+import App from './components/app';
 import reportWebVitals from './reportWebVitals';
 
 
@@ -14,7 +14,7 @@ import reportWebVitals from './reportWebVitals';
 // const aComponent = 
 //   <>
 //     <h1>
-//       Ok, The instructor is know what he is doing :)
+//       Ok, The instructor know what he is doing :)
 //     </h1>
 //     <p>Today is {getCurrentDate() /*JS can be written in curly braces, is a Babel thing*/}</p>
 //   </>;

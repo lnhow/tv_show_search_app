@@ -1,9 +1,9 @@
 import React from 'react';
 import 'whatwg-fetch';
 
-import Loader from '../../components/Loader';
-import SeriesInfo from '../../components/SeriesInfo';
-import NotFound from '../../components/NotFound';
+import Loader from '../../components/loader';
+import SeriesInfo from '../../components/seriesInfo';
+import NotFound from '../../components/notFound';
 
 //An API for TV shows infomation
 const queryFormat = "http://api.tvmaze.com/shows/";

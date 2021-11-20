@@ -3,9 +3,9 @@ import React from 'react';
 import 'whatwg-fetch';
 
 import './App.css';
-import Main from '../Main';
-import Header from '../AppHeader';
-import Footer from '../AppFooter';
+import Main from '../main';
+import Header from '../appHeader';
+import Footer from '../appFooter';
 
 // function Test() {
 //   return 5;

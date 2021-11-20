@@ -1,8 +1,8 @@
 import {Switch, Route} from 'react-router-dom';
 
-import Series from '../../containers/Series';
-import SingleSeries from '../../containers/SingleSeries';
-import NotFound from '../NotFound';
+import Series from '../../containers/series';
+import SingleSeries from '../../containers/singleSeries';
+import NotFound from '../notFound';
 
 const Main = (props) => {
   return (

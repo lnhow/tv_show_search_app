@@ -1,9 +1,9 @@
 import React from 'react';
 
-import SeriesList from '../../components/SeriesList';
-import Loader from "../../components/Loader";
-import AppIntro from "../../components/Intro";
-import SearchBox from "../../components/SearchBox";
+import SeriesList from '../../components/seriesList';
+import Loader from "../../components/loader";
+import AppIntro from "../../components/intro";
+import SearchBox from "../../components/searchBox";
 
 //An API for TV shows infomation
 const queryFormat = "http://api.tvmaze.com/search/shows?q=";
